@@ -1,0 +1,39 @@
+# Secrets
+.env
+.env.local
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Reports (keep examples + gitkeep)
+reports/*.md
+!reports/examples/
+!reports/.gitkeep
+
+# Media / OS
+*.jpg
+*.jpeg
+*.png
+*.mp4
+!content/samples/
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
