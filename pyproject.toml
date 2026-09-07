@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "social-autopilot"
+version = "0.1.0"
+description = "Cloud-ready daily social automation for beauty-brand marketing (Meta + X official APIs)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "xutian0101" }]
+dependencies = [
+  "typer>=0.12",
+  "httpx>=0.27",
+  "PyYAML>=6.0",
+  "python-dotenv>=1.0",
+  "oauthlib>=3.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-httpx>=0.30",
+  "respx>=0.21",
+]
+
+[project.scripts]
+social-autopilot = "social_autopilot.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["social_autopilot*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,16 @@
+services:
+  social-autopilot:
+    build: .
+    env_file:
+      - .env
+    environment:
+      DRY_RUN: "${DRY_RUN:-true}"
+      TIMEZONE: "${TIMEZONE:-Asia/Shanghai}"
+      CONTENT_DIR: /app/content
+      REPORTS_DIR: /app/reports
+    volumes:
+      - ./content:/app/content:ro
+      - ./reports:/app/reports
+    # One-shot daily job; schedule via host cron or an orchestrator:
+    #   0 9 * * * cd /path/to/social-autopilot && docker compose run --rm social-autopilot
+    profiles: ["manual"]

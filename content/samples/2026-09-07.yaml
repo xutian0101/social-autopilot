@@ -1,0 +1,20 @@
+date: 2026-09-07
+title: 晨间护肤仪式
+platforms:
+  - facebook
+  - instagram
+  - x
+text: |
+  早安～新的一周从轻薄保湿开始 ✨
+  我们的玻尿酸精华，一滴锁住水润，妆前也好推开。
+  今天也要温柔对待自己的皮肤哦。
+hashtags:
+  - 护肤
+  - 玻尿酸
+  - BeautyRoutine
+  - Skincare
+# Instagram Content Publishing needs a public HTTPS image_url in live mode.
+# For DRY_RUN a local path is enough to demonstrate the call chain.
+media: placeholder.jpg
+image_url: https://example.com/media/serum-morning.jpg
+link: https://example.com/products/ha-serum
